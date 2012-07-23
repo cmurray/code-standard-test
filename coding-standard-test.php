@@ -1,6 +1,6 @@
 
 <?php
 
-#Hur be a comment
+//Hur be a comment
 
 ?>
