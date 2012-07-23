@@ -6,7 +6,7 @@
  <target name="phpcs"
          description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
   <exec executable="phpcs">
-   <arg value="--standard=${basedir}/build/phpcs.xml" />
+   <arg value="--standard=/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
    <arg path="${basedir}" />
   </exec>
  </target>
@@ -15,7 +15,7 @@
   <exec executable="phpcs" output="/dev/null">
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
-   <arg value="--standard=${basedir}/build/phpcs.xml" />
+   <arg value="--/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
    <arg path="${basedir}" />
   </exec>
  </target>
