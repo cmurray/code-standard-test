@@ -49,13 +49,11 @@
  </target>
 
  <target name="phpcs-ci" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
-  <exec executable="phpcs" output="/dev/null">
-  <apply failonerror="true">
+  <exec executable="phpcs" output="/dev/null" failonerror="true">
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
    <arg value="--/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
    <arg path="${basedir}" />
-  </apply>
   </exec>
  </target>
 
