@@ -156,19 +156,6 @@
  </rule>
 
  <!--
-    There is a special internal error message produced by PHP_CodeSniffer
-    when it is unable to detect code in a file, possible due to
-    the use of short open tags even though php.ini disables them.
-    You can disable this message in the same way as sniff messages.
-
-    Again, the code here will be displayed in the PHP_CodeSniffer
-    output when using the -s command line argument while checking a file.
- -->
- <rule ref="Internal.NoCodeFound">
-  <severity>0</severity>
- </rule>
-
- <!--
     You can also hard-code ignore patterns for specific sniffs,
     a feature not available on the command line.
 
