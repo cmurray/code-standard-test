@@ -5,11 +5,5 @@
 //A normal comment
 //A normal comment
 
-class someClass {
-
-    protected $thisIsAReallyLongNameForAVariable = 5;
-    public function a($index) {}
-}
-
 
 ?>
