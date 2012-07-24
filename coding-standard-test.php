@@ -6,7 +6,7 @@
 //A normal comment
 
 
-$i = 700000;
+int $i = 700000;
 
 
 ?>
