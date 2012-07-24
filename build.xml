@@ -4,7 +4,7 @@
 
  
  <target name="build" 
-   depends="prepare, lint, phploc, pdepend, phpmd, phpcs"
+   depends="prepare, lint, phploc, pdepend, phpmd, phpcs, phpdoc"
  />
 
 
