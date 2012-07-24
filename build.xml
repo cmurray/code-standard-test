@@ -79,7 +79,6 @@
 
  <target name="phpcs" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
   <exec executable="phpcs" output="/dev/null">
-   <arg value="--ignore=${basedir}/test" />
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
    <arg value="--standard=/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
