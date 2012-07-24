@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project name="name-of-project" default="build">
+ 
  <target name="build" 
    depends="prepare, lint, phploc, pdepend, phpmd-ci, phpcs-ci"
  />
@@ -58,17 +59,6 @@
   </exec>
  </target>
 
-
-
- <target name="phpmd"
-         description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
-  <exec executable="phpmd">
-   <arg path="${basedir}" />
-   <arg value="text" />
-   <arg value="/var/lib/jenkins/creatuity-code-standard/phpmd.xml" />
-  </exec>
- </target>
-
  <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
   <exec executable="phpmd">
    <arg path="${basedir}" />
@@ -80,19 +70,8 @@
  </target>
 
 
-
-
-
- <target name="phpcs"
-         description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
-  <exec executable="phpcs">
-   <arg value="--standard=/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
-   <arg path="${basedir}" />
-  </exec>
- </target>
-
  <target name="phpcs-ci" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
-  <exec executable="phpcs" output="/dev/null" failonerror="true">
+  <exec executable="phpcs" output="/dev/null" warnonerror="true">
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
    <arg value="--standard=/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
