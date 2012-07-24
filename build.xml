@@ -3,7 +3,7 @@
 <project name="name-of-project" default="build">
  
  <target name="build" 
-   depends="prepare, lint, phploc, pdepend, phpmd-ci, phpcs-ci"
+   depends="prepare, lint, phploc, pdepend, phpmd, phpcs"
  />
 
 
@@ -46,7 +46,12 @@
   </exec>
  </target>
 
-
+ <target name="phpcpd" description="Generate pmd-cpd.xml using PHPCPD">
+  <exec executable="phpcpd">
+   <arg value="--log-pmd ${basedir}/build/logs/pmd-cpd.xml" />
+   <arg path="${basedir}" />
+  </exec>
+ </target>
 
 
 
@@ -59,7 +64,7 @@
   </exec>
  </target>
 
- <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
+ <target name="phpmd" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
   <exec executable="phpmd">
    <arg path="${basedir}" />
    <arg value="xml" />
@@ -70,7 +75,7 @@
  </target>
 
 
- <target name="phpcs-ci" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
+ <target name="phpcs" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
   <exec executable="phpcs" output="/dev/null">
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
