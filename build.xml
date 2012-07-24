@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="name-of-project" default="build">
+<project name="name-of-project" default="build"
+  description="This is the generic build file, please copy and edit to suit the project you are using it for.">
 
  
  <target name="build" 
