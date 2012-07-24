@@ -2,11 +2,11 @@
 <?php
 
 //Hur be a comment
-//Another comment
+#Another comment
 //A normal comment
 
 
 $i = 700000;
-$var = $i + 9399; 
+
 
 ?>
