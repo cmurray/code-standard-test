@@ -84,6 +84,7 @@
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
    <arg value="--standard=/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
+   <arg value="--ignore=${basedir}/test/" />
    <arg path="${basedir}" />
   </exec>
  </target>
