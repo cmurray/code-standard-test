@@ -71,9 +71,9 @@
    <arg path="${basedir}" />
    <arg value="xml" />
    <arg value="/var/lib/jenkins/creatuity-code-standard/phpmd.xml" />
-   <arg value="--exclude test/" />
    <arg value="--reportfile" />
    <arg value="${basedir}/build/logs/pmd.xml" />
+   <arg value="--exclude test/" />
   </exec>
  </target>
 
