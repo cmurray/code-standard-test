@@ -101,11 +101,8 @@
 
   <target name="phpdoc" description="Generate API documentation using PHPDocumentor">
   <exec executable="phpdoc">
-   <arg value="--directory" />
-   <arg path="${basedir}" />
-   <arg value="--target" />
-   <arg path="${basedir}/build/api" />
-   <arg value="--ignore=${basedir}/test" />
+   <arg value="--directory=${basedir}" />
+   <arg value="--target=${basedir}/build/api" />
   </exec>
  </target>
 
