@@ -5,7 +5,11 @@
 //A normal comment
 //A normal comment
 
-$thisIsAReallyLongVariableNameSoIHopeItFailsForReal = 5;
+class someClass {
+
+    protected $thisIsAReallyLongNameForAVariable = 5;
+    public function a($index) {}
+}
 
 
 ?>
