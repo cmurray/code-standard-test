@@ -5,4 +5,7 @@
 //Another comment
 //A normal comment
 
+
+int $i = 700000;
+
 ?>
