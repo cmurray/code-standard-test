@@ -68,12 +68,10 @@
 
  <target name="phpmd" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
   <exec executable="phpmd">
-   <arg path="${basedir}" />
-   <arg value="xml" />
-   <arg value="/var/lib/jenkins/creatuity-code-standard/phpmd.xml" />
-   <arg value="--reportfile" />
-   <arg value="${basedir}/build/logs/pmd.xml" />
-   <arg value="--exclude test" />
+   <arg 
+      line="${basedir} xml /var/lib/jenkins/creatuity-code-standard/phpmd.xml --reportfile ${basedir}/build/logs/pmd.xml --exclude test"
+    />
+
   </exec>
  </target>
 
