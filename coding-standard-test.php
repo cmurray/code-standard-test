@@ -12,4 +12,11 @@ class someClass {
     private function bar($howdy) {}
 }
 
+class someOtherClass {
+
+    private function classFunction() {}
+    private function bar($howdy) {}
+}
+
+
 ?>

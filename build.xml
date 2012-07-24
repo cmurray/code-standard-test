@@ -2,7 +2,7 @@
 
 <project name="name-of-project" default="build">
  <target name="build" 
-   depends="prepare, lint, pdepend, phpmd-ci, phpcs-ci"
+   depends="prepare, lint, phploc, pdepend, phpmd-ci, phpcs-ci"
  />
 
 
@@ -34,6 +34,18 @@
    </fileset>
   </apply>
  </target>
+
+
+
+ <target name="phploc" description="Measure project size using PHPLOC">
+  <exec executable="phploc">
+   <arg value="--log-csv" />
+   <arg value="${basedir}/build/logs/phploc.csv" />
+   <arg path="${basedir}" />
+  </exec>
+ </target>
+
+
 
 
 
