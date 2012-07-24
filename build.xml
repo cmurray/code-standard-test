@@ -66,7 +66,7 @@
  </target>
 
 
- <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
+ <target name="phpmd" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
   <exec executable="phpmd">
    <arg path="${basedir}" />
    <arg value="xml" />
