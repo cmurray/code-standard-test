@@ -6,7 +6,10 @@
 //A normal comment
 
 
-int $i = 700000;
+class someClass {
 
+    private function classFunction() {}
+    private function bar($howdy) {}
+}
 
 ?>
