@@ -4,7 +4,7 @@
 
  
  <target name="build" 
-   depends="prepare, lint, phploc, pdepend, phpmd, phpcs, phpcb"
+   depends="prepare, lint, phploc, pdepend, phpmd, phpcs, phpcb, phpdoc"
  />
 
 
@@ -95,6 +95,15 @@
    <arg line="--log    ${basedir}/build/logs
               --source ${basedir}
               --output ${basedir}/build/code-browser" />
+  </exec>
+ </target>
+
+
+  <target name="phpdoc" description="Generate API documentation using PHPDocumentor">
+  <exec executable="phpdoc">
+   <arg line="-d ${basedir}
+              -t ${basedir}/build/api 
+              --ignore=${basedir}/test" />
   </exec>
  </target>
 
