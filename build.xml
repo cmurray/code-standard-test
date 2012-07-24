@@ -89,6 +89,14 @@
   </exec>
  </target>
 
+<target name="phpdoc" description="Generate API documentation using PHPDocumentor">
+  <exec executable="phpdoc">
+   <arg line="-d" />
+   <arg value="${basedir}" />
+   <arg value="-t" />
+   <arg value="${basedir}/build/api" />
+  </exec>
+ </target>
 
 
 
