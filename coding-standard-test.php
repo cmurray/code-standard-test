@@ -6,6 +6,7 @@
 //A normal comment
 
 
-int $i = 700000;
+$i = 700000;
+$var = $i + 9399; 
 
 ?>
