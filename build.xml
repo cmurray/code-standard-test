@@ -104,11 +104,8 @@
     <arg path="${basedir}/build/api/structure.xml" />
    </exec>
    <exec executable="phpdoc">
-    <arg value="run" />
-    <arg value="--directory" />
-    <arg path="${basedir}" />
-    <arg value="--target" />
-    <arg path="${basedir}/build/api" />
+    <arg value="--directory=${basedir}" />
+    <arg value="--target=${basedir}/build/api" />
   </exec>
  </target>
 
