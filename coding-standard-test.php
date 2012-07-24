@@ -5,7 +5,7 @@
 //A normal comment
 //A normal comment
 
-$var = 5;
-$var = 5;
+$thisIsAReallyLongVariableNameSoIHopeItFailsForReal = 5;
+
 
 ?>
