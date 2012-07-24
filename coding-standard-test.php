@@ -1,7 +1,7 @@
 
 <?php
 
-//Hur be a comment
-//Another comment
+#Hur be a comment
+#Another comment
 
 ?>
