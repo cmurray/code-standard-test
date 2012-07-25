@@ -7,7 +7,7 @@
   <property name="builddir" value="${basedir}/build" />
   <!-- To ignore files enter files/directories as comma separated string -->
   <!-- If no files should be ignored, comment out the line -->
-  <!--<property name="ignore" value="${basedir}/test" />-->
+  <property name="ignore" value="${basedir}/test" />
 
  
  <target name="build" 
