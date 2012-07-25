@@ -1,6 +1,6 @@
 <phpdox xmlns="http://phpdox.de/config">
 
-
+ <!-- Testing xml comment -->
  <project name="Coding-Standards-Test" workdir="build/documentation/phpdox" 
           source="/var/lib/jenkins/workspace/Coding-Standards-Test">
   <collector publiconly="false">
