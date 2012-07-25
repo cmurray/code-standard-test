@@ -1,0 +1,13 @@
+<phpdox xmlns="http://phpdox.de/config">
+ <project name="Coding-Standards-Test" 
+          source="/var/lib/jenkins/workspace/Coding-Standards-Test" 
+          workdir="build/documentation/phpdox">
+  <collector publiconly="false">
+   <include mask="*.php" />
+  </collector>
+
+  <generator output="build">
+   <build engine="html" enabled="true" output="documentation"/>
+  </generator>
+ </project>
+</phpdox>
