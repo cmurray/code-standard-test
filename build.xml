@@ -18,7 +18,7 @@
     ** If no files should be ignored, remove or comment out the ignore property
     ** Use the following as an example of how to format the ignore property
     -->
-  <property name="ignore" value="*/test/*,*/test2/*" />-
+  <property name="ignore" value="*/test/*,*/test2/*" />
 
  
  <target name="build" 
