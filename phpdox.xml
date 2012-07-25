@@ -1,7 +1,6 @@
 <phpdox xmlns="http://phpdox.de/config">
  <project name="Coding-Standards-Test" workdir="build/documentation/phpdox" 
-          basedir=".">
-  <property name="source" value="${basedir}"/>
+          source=".">
   <collector publiconly="false">
    <include mask="*.php" />
   </collector>
