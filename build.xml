@@ -67,14 +67,6 @@
  </target>
 
 
- <target name="phpcpd" description="Generate pmd-cpd.xml using PHPCPD">
-  <exec executable="phpcpd">
-   <arg value="--log-pmd ${builddir}/logs/pmd-cpd.xml" />
-   <arg path="${basedir}" />
-  </exec>
- </target>
-
-
  <target name="pdepend" description="Calculate software metrics using PHP_Depend">
   <exec executable="pdepend">
    <arg value="--jdepend-xml=${builddir}/logs/jdepend.xml" />
