@@ -15,14 +15,14 @@
   
   <!-- 
     ** To ignore files enter files/directories as comma separated string
-    ** If no files should be ignored, remove the ignore property
+    ** If no files should be ignored, remove or comment out the ignore property
     ** Use the following as an example of how to format the ignore property
     -->
   <property name="ignore" value="*/test/*" />
 
  
  <target name="build" 
-   depends="prepare, lint, phploc, pdepend, phpmd, phpcs, phpcb, phpdox"
+   depends="prepare, lint, phploc, pdepend, phpmd, phpcpd, phpcs, phpcb, phpdox"
  />
 
 
@@ -128,5 +128,13 @@
   </exec>
  </target>
 
+
+<target name="phpcpd" description="Generate pmd-cpd.xml using PHPCPD">
+  <exec executable="phpcpd">
+   <arg value="--ignore=${ignore}" />" 
+   <arg value="--log-pmd=${basedir}/build/logs/pmd-cpd.xml" />
+   <arg path="${basedir}" />
+  </exec>
+ </target>
 
 </project>
