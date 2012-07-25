@@ -2,7 +2,7 @@
 
 <project name="name-of-project" default="build">
 
-  <property name="builddir" value="${builddir}" />
+  <property name="builddir" value="${basedir}" />
 
  
  <target name="build" 
