@@ -2,6 +2,8 @@
 
 <project name="name-of-project" default="build">
 
+  <property name="builddir" value="${builddir}" />
+
  
  <target name="build" 
    depends="prepare, lint, phploc, pdepend, phpmd, phpcs, phpcb, phpdox"
@@ -9,22 +11,22 @@
 
 
  <target name="clean" description="Cleanup build artifacts">
-  <delete dir="${basedir}/build/api"/>
-  <delete dir="${basedir}/build/code-browser"/>
-  <delete dir="${basedir}/build/coverage"/>
-  <delete dir="${basedir}/build/logs"/>
-  <delete dir="${basedir}/build/pdepend"/>
-  <delete dir="${basedir}/build/phpdox"/>
+  <delete dir="${builddir}/api"/>
+  <delete dir="${builddir}/code-browser"/>
+  <delete dir="${builddir}/coverage"/>
+  <delete dir="${builddir}/logs"/>
+  <delete dir="${builddir}/pdepend"/>
+  <delete dir="${builddir}/phpdox"/>
  </target>
 
 
  <target name="prepare" depends="clean" description="Prepare for build">
-  <mkdir dir="${basedir}/build/api"/>
-  <mkdir dir="${basedir}/build/code-browser"/>
-  <mkdir dir="${basedir}/build/coverage"/>
-  <mkdir dir="${basedir}/build/logs"/>
-  <mkdir dir="${basedir}/build/pdepend"/>
-  <mkdir dir="${basedir}/build/phpdox"/>
+  <mkdir dir="${builddir}/api"/>
+  <mkdir dir="${builddir}/code-browser"/>
+  <mkdir dir="${builddir}/coverage"/>
+  <mkdir dir="${builddir}/logs"/>
+  <mkdir dir="${builddir}/pdepend"/>
+  <mkdir dir="${builddir}/phpdox"/>
  </target>
 
 
@@ -43,7 +45,7 @@
  <target name="phploc" description="Measure project size using PHPLOC">
   <exec executable="phploc">
    <arg value="--log-csv" />
-   <arg value="${basedir}/build/logs/phploc.csv" />
+   <arg value="${builddir}/logs/phploc.csv" />
    <arg path="${basedir}" />
   </exec>
  </target>
@@ -51,7 +53,7 @@
 
  <target name="phpcpd" description="Generate pmd-cpd.xml using PHPCPD">
   <exec executable="phpcpd">
-   <arg value="--log-pmd ${basedir}/build/logs/pmd-cpd.xml" />
+   <arg value="--log-pmd ${builddir}/logs/pmd-cpd.xml" />
    <arg path="${basedir}" />
   </exec>
  </target>
@@ -59,9 +61,9 @@
 
  <target name="pdepend" description="Calculate software metrics using PHP_Depend">
   <exec executable="pdepend">
-   <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
-   <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
-   <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
+   <arg value="--jdepend-xml=${builddir}/logs/jdepend.xml" />
+   <arg value="--jdepend-chart=${builddir}/pdepend/dependencies.svg" />
+   <arg value="--overview-pyramid=${builddir}/pdepend/overview-pyramid.svg" />
    <arg path="${basedir}" />
   </exec>
  </target>
@@ -75,7 +77,7 @@
    <arg value="--exclude" />
    <arg value="${basedir}/test/" />
    <arg value="--reportfile" />
-   <arg value="${basedir}/build/logs/pmd.xml" />
+   <arg value="${builddir}/logs/pmd.xml" />
   </exec>
  </target>
 
@@ -83,7 +85,7 @@
  <target name="phpcs" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
   <exec executable="phpcs" output="/dev/null">
    <arg value="--report=checkstyle" />
-   <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
+   <arg value="--report-file=${builddir}/logs/checkstyle.xml" />
    <arg value="--standard=/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
    <arg value="--ignore=${basedir}/test/" />
    <arg path="${basedir}" />
@@ -93,9 +95,9 @@
 
  <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
   <exec executable="phpcb">
-   <arg line="--log    ${basedir}/build/logs
+   <arg line="--log    ${builddir}/logs
               --source ${basedir}
-              --output ${basedir}/build/code-browser" />
+              --output ${builddir}/code-browser" />
   </exec>
  </target>
 
