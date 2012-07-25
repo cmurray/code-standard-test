@@ -6,7 +6,7 @@
    ** /var/lib/jenkins/workspace/[project title in jenkins]
    -->
  <project name="Coding-Standards-Test" workdir="build/phpdox" 
-          source="/var/lib/jenkins/workspace/Coding-Standards-Test">
+          source="${basedir}">
 
   <collector publiconly="false">
    <include mask="*.php" />
