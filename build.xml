@@ -4,7 +4,7 @@
 
  
  <target name="build" 
-   depends="prepare, lint, phploc, pdepend, phpmd, phpcs, phpcb, phpdoc"
+   depends="prepare, lint, phploc, pdepend, phpmd, phpcs, phpcb, phpdox"
  />
 
 
@@ -99,14 +99,8 @@
  </target>
 
 
-  <target name="phpdoc" description="Generate API documentation using PHPDocumentor">
-   <exec executable="touch">
-    <arg path="${basedir}/build/api/structure.xml" />
-   </exec>
-   <exec executable="phpdoc">
-    <arg value="--directory=${basedir}" />
-    <arg value="--target=${basedir}/build/api" />
-  </exec>
+ <target name="phpdox" description="Generate API documentation using phpDox">
+  <exec executable="phpdox"/>
  </target>
 
 
