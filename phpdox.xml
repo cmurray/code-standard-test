@@ -1,6 +1,5 @@
 <phpdox xmlns="http://phpdox.de/config">
- <project name="Coding-Standards-Test" workdir="build/documentation/phpdox" 
-          source=".">
+ <project name="Coding-Standards-Test" workdir="build/documentation/phpdox" source=".">
   <collector publiconly="false">
    <include mask="*.php" />
   </collector>
