@@ -46,7 +46,6 @@
       ** Enter the path to your source files
       -->
       <directory suffix=".php">src/</directory>
-      <directory suffic=".php">src/test*/</directory>
     </whitelist>
   </filter>
 
