@@ -7,9 +7,6 @@
          verbose="true"
          timeoutForSmallTests="5">
 
-  <!-- Enter the name of your project -->
-  <property name="projectname" value="Coding-Standards-Test" />
-
   <!-- 
     ** To ignore files enter files as comma separated string
     ** If no files should be ignored, remove or comment out the ignore property
@@ -19,9 +16,8 @@
 
 
   <testsuites>
-
   <!--
-    ** Enter the name of your Test Suite
+    ** Enter the name of your Test Suite and its location
     ** All Tests should end in 'Test.php'
     -->
     <testsuite name="Test-Suite-Name">
@@ -29,17 +25,28 @@
     </testsuite>
   </testsuites>
 
+
   <logging>
-    <log type="coverage-html" target="build/coverage" title="${projectname}"
+
+  <!-- 
+    ** Enter the name of your project 
+    -->
+    <log type="coverage-html" target="build/coverage" title="Project-Name"
          charset="UTF-8" yui="true" highlight="true"
          lowUpperBound="35" highLowerBound="70"/>
     <log type="coverage-clover" target="build/logs/clover.xml"/>
     <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>
   </logging>
 
+
   <filter>
     <whitelist addUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">src</directory>
+
+    <!--
+      ** Enter the path to your source files
+      -->
+      <directory suffix=".php">src/</directory>
+
     </whitelist>
   </filter>
 
