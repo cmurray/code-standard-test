@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- Enter the name of the project -->
 <project name="name-of-project" default="build">
 
 <!-- Initiate properties -->
   <!-- ${basedir} already initialized to location of build.xml -->
   <property name="builddir" value="${basedir}/build" />
-  <!-- To ignore files enter files/directories as comma separated string -->
-  <!-- If no files should be ignored, comment out the line -->
-  <property name="ignore" value="${basedir}/test" />
+
+  <!-- 
+    ** Location of the Creatuity Coding Standard 
+    ** Used for PHPCS and PHPMD 
+    -->
+  <property name="codingstandard" value="/var/lib/jenkins/creatuity-code-standard" />
+  
+  <!-- 
+    ** To ignore files enter files/directories as comma separated string
+    ** If no files should be ignored, remove the ignore property
+    ** Use the following as an example of how to format the ignore property
+    -->
+  <property name="ignore" value="*/test/*" />
 
  
  <target name="build" 
@@ -78,7 +89,7 @@
   <exec executable="phpmd">
    <arg path="${basedir}" />
    <arg value="xml" />
-   <arg value="/var/lib/jenkins/creatuity-code-standard/phpmd.xml" />
+   <arg value="${codingstandard}/phpmd.xml" />
    <arg value="--exclude" />
    <arg value="${ignore}" />
    <arg value="--reportfile" />
@@ -91,7 +102,7 @@
   <exec executable="phpcs" output="/dev/null">
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${builddir}/logs/checkstyle.xml" />
-   <arg value="--standard=/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
+   <arg value="--standard=${codingstandard}/phpcs.xml" />
    <arg value="--ignore=${ignore}" />
    <arg path="${basedir}" />
   </exec>
