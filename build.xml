@@ -116,7 +116,7 @@
  <target name="phpdox" description="Generate API documentation using phpDox">
   <exec executable="phpdox">
     <arg value="--file" />
-    <arg path="${basedir}/phpdox.xml" />
+    <arg path="${basedir}/phpdox.xml.dist" />
   </exec>
  </target>
 
