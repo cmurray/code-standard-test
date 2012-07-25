@@ -1,5 +1,6 @@
 <phpdox xmlns="http://phpdox.de/config">
- <project name="Coding-Standards-Test" workdir="build/documentation/phpdox" basedir=".">
+ <project name="Coding-Standards-Test" workdir="build/documentation/phpdox" 
+          basedir="/var/lib/jenkins/workspace/Coding-Standards-Test">
   <property name="source" value="${basedir}"/>
   <collector publiconly="false">
    <include mask="*.php" />
