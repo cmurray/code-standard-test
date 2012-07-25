@@ -1,8 +1,8 @@
 <phpdox xmlns="http://phpdox.de/config">
 
  <!-- 
-   ** Before starting a project, you must update the source field to point to
-   ** the project's location in Jenkins.
+   ** Before starting a project, name it and update the source field to 
+   ** point to the project's location in Jenkins.
    ** The path will be:
    ** /var/lib/jenkins/workspace/[project title in jenkins]
    -->
