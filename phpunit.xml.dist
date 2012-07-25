@@ -6,6 +6,18 @@
          strict="true"
          verbose="true"
          timeoutForSmallTests="5">
+
+  <!-- Enter the name of your project -->
+  <property name="projectname" value="Coding-Standards-Test" />
+
+  <!-- 
+    ** To ignore files enter files as comma separated string
+    ** If no files should be ignored, remove or comment out the ignore property
+    ** Use the following as an example of how to format the ignorefiles property
+    -->
+
+
+
   <testsuites>
 
   <!--
@@ -18,7 +30,7 @@
   </testsuites>
 
   <logging>
-    <log type="coverage-html" target="build/coverage" title="BankAccount"
+    <log type="coverage-html" target="build/coverage" title="${projectname}"
          charset="UTF-8" yui="true" highlight="true"
          lowUpperBound="35" highLowerBound="70"/>
     <log type="coverage-clover" target="build/logs/clover.xml"/>
@@ -27,7 +39,7 @@
 
   <filter>
     <whitelist addUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">${basedir}</directory>
+      <directory suffix=".php">src</directory>
     </whitelist>
   </filter>
 

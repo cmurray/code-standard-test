@@ -5,6 +5,8 @@
 
 <!-- Initiate properties -->
   <!-- ${basedir} already initialized to location of build.xml -->
+  <!-- Enter the location of the source code -->
+  <property name="sourcedir" value="${basedir}/src" />
   <property name="builddir" value="${basedir}/build" />
 
   <!-- 
@@ -50,7 +52,7 @@
   <apply executable="php" failonerror="true">
    <arg value="-l" />
 
-   <fileset dir="${basedir}">
+   <fileset dir="${sourcedir}">
     <include name="**/*.php" />
     <modified />
    </fileset>
@@ -62,7 +64,7 @@
   <exec executable="phploc">
    <arg value="--log-csv" />
    <arg value="${builddir}/logs/phploc.csv" />
-   <arg path="${basedir}" />
+   <arg path="${sourcedir}" />
   </exec>
  </target>
 
@@ -72,14 +74,14 @@
    <arg value="--jdepend-xml=${builddir}/logs/jdepend.xml" />
    <arg value="--jdepend-chart=${builddir}/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${builddir}/pdepend/overview-pyramid.svg" />
-   <arg path="${basedir}" />
+   <arg path="${sourcedir}" />
   </exec>
  </target>
 
 
  <target name="phpmd" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
   <exec executable="phpmd">
-   <arg path="${basedir}" />
+   <arg path="${sourcedir}" />
    <arg value="xml" />
    <arg value="${codingstandard}/phpmd.xml" />
    <arg value="--exclude" />
@@ -96,7 +98,7 @@
    <arg value="--report-file=${builddir}/logs/checkstyle.xml" />
    <arg value="--standard=${codingstandard}/phpcs.xml" />
    <arg value="--ignore=${ignore}" />
-   <arg path="${basedir}" />
+   <arg path="${sourcedir}" />
   </exec>
  </target>
 
@@ -106,7 +108,7 @@
    <arg value="--log" />
    <arg path="${builddir}/logs" />
    <arg value="--source" />
-   <arg path="${basedir}" />
+   <arg path="${sourcedir}" />
    <arg value="--exclude" />
    <arg path="${ignore}" />
    <arg value="--output" />
@@ -129,16 +131,13 @@
    <arg path="${builddir}/logs/pmd-cpd.xml" />
    <arg value="--exclude" />
    <arg path="${ignore}" />
-   <arg path="${basedir}" />
+   <arg path="${sourcedir}" />
   </exec>
  </target>
 
 
  <target name="phpunit" description="Run unit tests using PHPUnit and generates junit.xml and clover.xml">
-  <exec executable="phpunit" failonerror="true">
-   <arg value="--exclude" />
-   <arg path="${ignore}" />
-  </exec>
+  <exec executable="phpunit" failonerror="true" />
  </target>
 
 
