@@ -123,7 +123,7 @@
 
 <target name="phpcpd" description="Generate pmd-cpd.xml using PHPCPD">
   <exec executable="phpcpd">
-   <arg value="--ignore=${ignore}" />" 
+   <arg value="--ignore=${ignore}" />
    <arg value="--log-pmd=${basedir}/build/logs/pmd-cpd.xml" />
    <arg path="${basedir}" />
   </exec>
