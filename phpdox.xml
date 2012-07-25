@@ -5,23 +5,23 @@
    ** The path will be:
    ** /var/lib/jenkins/workspace/[project title in jenkins]
    -->
- <project name="Coding-Standards-Test" workdir="build/documentation/phpdox" 
+ <project name="Coding-Standards-Test" workdir="build/phpdox" 
           source="/var/lib/jenkins/workspace/Coding-Standards-Test">
-          
+
   <collector publiconly="false">
    <include mask="*.php" />
-   <!--
-     ** Exclude skeleton: <exclude mask="" />
-     ** Fill in the mask field with the file pattern or directory
-     ** that should be excluded.
-     ** Directories can be excluded with the format:
-     ** <exclude mask="*/test/*" />
-     -->
-   <exclude mask="*/test/*" />
+    <!--
+      ** Exclude skeleton: <exclude mask="" />
+      ** Fill in the mask field with the file pattern or directory
+      ** that should be excluded.
+      ** Directories can be excluded with the format:
+      ** <exclude mask="*/test/*" />
+      -->
+    <exclude mask="*/test/*" />
   </collector>
 
   <generator output="build">
-   <build engine="html" enabled="true" output="documentation"/>
+   <build engine="html" enabled="true" output="api"/>
   </generator>
  </project>
 </phpdox>
