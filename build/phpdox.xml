@@ -8,7 +8,8 @@
           source="/var/lib/jenkins/workspace/Coding-Standards-Test">
   <collector publiconly="false">
    <include mask="*.php" />
-   <exclude mask="test/" />
+   <exclude mask="*/test/*" />
+   <exclude mask="*\test\*" />
   </collector>
 
   <generator output="build">
