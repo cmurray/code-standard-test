@@ -6,14 +6,14 @@
    ** /var/lib/jenkins/workspace/[project title in jenkins]
    -->
  <project name="Coding-Standards-Test" workdir="build/phpdox" 
-          source="${basedir}">
+          source="/var/lib/jenkins/workspace/Coding-Standards-Test">
 
   <collector publiconly="false">
    <include mask="*.php" />
     <!--
       ** Exclude skeleton: <exclude mask="" />
-      ** Fill in the mask field with the file pattern or directory
-      ** that should be excluded.
+      ** Fill in the mask field with the file pattern or directory that
+      ** should be excluded. Add a new entry for each file/directory.
       ** Directories can be excluded with the format:
       ** <exclude mask="*/test/*" />
       -->
