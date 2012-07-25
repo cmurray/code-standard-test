@@ -14,6 +14,7 @@
   <delete dir="${basedir}/build/coverage"/>
   <delete dir="${basedir}/build/logs"/>
   <delete dir="${basedir}/build/pdepend"/>
+  <delete dir="${basedir}/build/documentation"/>
  </target>
 
 
@@ -23,7 +24,8 @@
   <mkdir dir="${basedir}/build/coverage"/>
   <mkdir dir="${basedir}/build/logs"/>
   <mkdir dir="${basedir}/build/pdepend"/>
-  <mkdir dir="${basedir}/build/phpdox"/>
+  <mkdir dir="${basedir}/build/documentation"/>
+  <mkdir dir="${basedir}/build/documentation/phpdox"/>
  </target>
 
 
