@@ -2,7 +2,12 @@
 
 <project name="name-of-project" default="build">
 
+<!-- Initiate properties -->
+  <!-- ${basedir} already initialized to location of build.xml -->
   <property name="builddir" value="${basedir}/build" />
+  <!-- To ignore files enter files/directories as comma separated string -->
+  <!-- If no files should be ignored, comment out the line -->
+  <property name="ignore" value="${basedir}/test" />
 
  
  <target name="build" 
@@ -75,7 +80,7 @@
    <arg value="xml" />
    <arg value="/var/lib/jenkins/creatuity-code-standard/phpmd.xml" />
    <arg value="--exclude" />
-   <arg value="${basedir}/test/" />
+   <arg value="${ignore}" />
    <arg value="--reportfile" />
    <arg value="${builddir}/logs/pmd.xml" />
   </exec>
@@ -87,7 +92,7 @@
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${builddir}/logs/checkstyle.xml" />
    <arg value="--standard=/var/lib/jenkins/creatuity-code-standard/phpcs.xml" />
-   <arg value="--ignore=${basedir}/test/" />
+   <arg value="--ignore=${ignore}" />
    <arg path="${basedir}" />
   </exec>
  </target>
