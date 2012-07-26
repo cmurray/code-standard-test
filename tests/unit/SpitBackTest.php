@@ -1,5 +1,6 @@
 <?php
 
+require_once('../../src/coding-standard-test.php');
 
 class OtherCodeIsHereTest extends PHPUnit_Framework_TestCase {
 
