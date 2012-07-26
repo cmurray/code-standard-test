@@ -19,6 +19,11 @@ class someClass {
 
 
     /**
+     * This is a really long variable name
+     *
+     * This variable was given an extremely long
+     * name in order to test phpmd's functionality
+     *
      * @access protected
      * @var int
      */
