@@ -8,6 +8,9 @@
          verbose="true"
          timeoutForSmallTests="5">
 
+  <property name="source" value="src" />
+
+
   <!-- 
     ** To ignore files enter files as comma separated string
     ** If no files should be ignored, remove or comment out the ignore property
@@ -42,7 +45,7 @@
 
   <filter>
     <whitelist addUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">src</directory>
+      <directory suffix=".php">${source}</directory>
     </whitelist>
   </filter>
 
