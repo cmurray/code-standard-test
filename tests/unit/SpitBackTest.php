@@ -1,6 +1,6 @@
 <?php
 
-require_once('othercodeishere.php');
+require_once('../../src/othercode/othercodeishere.php');
 
 class OtherCodeIsHereTest extends PHPUnit_Framework_TestCase {
 
