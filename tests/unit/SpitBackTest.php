@@ -1,5 +1,7 @@
 <?php
 
+require_once('othercodeishere.php');
+
 class OtherCodeIsHereTest extends PHPUnit_Framework_TestCase {
 
     public function testSpitBack() {
