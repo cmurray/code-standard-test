@@ -17,7 +17,16 @@
  */
 class someClass {
 
+
+    /**
+     * @access protected
+     * @var int
+     */
     protected $thisIsAReallyLongNameForAVariable = 5;
+    
+    /**
+     * @access public
+     */
     public function a($index) {
         return $index;
     }
