@@ -21,7 +21,7 @@
     ** If no files should be ignored, remove or comment out the ignore property
     ** Use the following as an example of how to format the ignore property
     -->
-  <property name="ignore" value="*/othercode/*" />
+  <property name="ignore" value="*/exclude/*,*/excludeother/*" />
 
  
  <target name="build" 
@@ -155,6 +155,10 @@
  </target>
 
 
+<!-- 
+  ** If you are not unit testing your project, comment out this section, and 
+  ** remove it as a build dependency from the build and build-parallel targets.
+  -->
  <target name="phpunit" description="Run unit tests using PHPUnit and generates junit.xml and clover.xml">
   <exec executable="phpunit" failonerror="true" />
  </target>
