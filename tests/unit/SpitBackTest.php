@@ -2,7 +2,7 @@
 
 class OtherCodeIsHereTest extends PHPUnit_Framework_TestCase {
 
-    public function spitBackTest() {
+    public function testSpitBack() {
         $message = 'Hello';
         $returnMessage = spitBack($message);
 
