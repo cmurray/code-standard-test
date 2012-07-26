@@ -11,4 +11,9 @@ class someClass {
     public function a($index) {}
 }
 
+function spitBack($message) {
+    return $message;
+}
+
+
 ?>
