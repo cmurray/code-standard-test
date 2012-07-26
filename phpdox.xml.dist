@@ -6,7 +6,7 @@
    ** /var/lib/jenkins/workspace/[project title in jenkins]
    -->
  <project name="Coding-Standards-Test" workdir="build/phpdox" 
-          source="/var/lib/jenkins/workspace/Coding-Standards-Test">
+          source="/var/lib/jenkins/workspace/Coding-Standards-Test/src">
 
   <collector publiconly="false">
    <include mask="*.php" />
@@ -15,9 +15,9 @@
       ** Fill in the mask field with the file pattern or directory that
       ** should be excluded. Add a new entry for each file/directory.
       ** Directories can be excluded with the format:
-      ** <exclude mask="*/test/*" />
+      ** <exclude mask="*/excludedir/*" />
       -->
-    <exclude mask="*/test/*" />
+
   </collector>
 
   <generator output="build">
