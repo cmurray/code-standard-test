@@ -41,7 +41,8 @@
 
   <filter>
     <whitelist addUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">./</directory>
+      <directory suffix=".php">src</directory>
+      <directory suffix=".php">src/othercode</directory>
     </whitelist>
   </filter>
 
