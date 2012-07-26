@@ -8,7 +8,6 @@
          verbose="true"
          timeoutForSmallTests="5">
 
-  <property name="source" value="src" />
 
 
   <!-- 
@@ -45,7 +44,7 @@
 
   <filter>
     <whitelist addUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">${source}</directory>
+      <directory suffix=".php">src</directory>
     </whitelist>
   </filter>
 
