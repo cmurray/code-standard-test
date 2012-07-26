@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Enter the name of the project -->
-<project name="name-of-project" default="build">
+<!-- If tools can not run in parallel set defual to 'build' -->
+<project name="name-of-project" default="build-parallel">
 
 <!-- Initiate properties -->
   <!-- ${basedir} already initialized to location of build.xml -->
@@ -24,8 +25,26 @@
 
  
  <target name="build" 
-   depends="prepare, lint, phploc, pdepend, phpmd, phpcpd, phpcs, phpdox, phpunit, phpcb"
+   depends="prepare, lint, pdepend, phpmd, phpcpd, phpcs, phploc, phpdox, phpunit, phpcb"
  />
+
+
+<target name="build-parallel"
+   depends="prepare,lint,tools-parallel,phpunit,phpcb"/>
+
+
+<target name="tools-parallel" description="Run tools in parallel">
+  <parallel threadCount="2">
+   <sequential>
+    <antcall target="pdepend"/>
+    <antcall target="phpmd"/>
+   </sequential>
+   <antcall target="phpcpd"/>
+   <antcall target="phpcs"/>
+   <antcall target="phploc"/>
+   <antcall target="phpdox"/>
+  </parallel>
+ </target>
 
 
  <target name="clean" description="Cleanup build artifacts">
