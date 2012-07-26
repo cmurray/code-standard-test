@@ -8,12 +8,9 @@
 class someClass {
 
     protected $thisIsAReallyLongNameForAVariable = 5;
-    public function a($index) {}
+    public function a($index) {
+        return $index;
+    }
 }
-
-function spitBack($message) {
-    return $message;
-}
-
 
 ?>

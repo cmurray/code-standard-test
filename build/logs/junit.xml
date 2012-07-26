@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test-Suite-Name" tests="3" assertions="3" failures="0" errors="0" time="0.003523">
+    <testsuite name="SomeClassTest" file="/Users/cmurray/Documents/code-standard-test/tests/unit/SomeClassTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.003347">
+      <testcase name="testA" class="SomeClassTest" file="/Users/cmurray/Documents/code-standard-test/tests/unit/SomeClassTest.php" line="5" assertions="1" time="0.003347"/>
+    </testsuite>
+    <testsuite name="ArrayTest" file="/Users/cmurray/Documents/code-standard-test/tests/unit/TestSuiteSampleTest.php" tests="2" assertions="2" failures="0" errors="0" time="0.000176">
+      <testcase name="testNewArrayIsEmpty" class="ArrayTest" file="/Users/cmurray/Documents/code-standard-test/tests/unit/TestSuiteSampleTest.php" line="5" assertions="1" time="0.000100"/>
+      <testcase name="testArrayContainsAnElement" class="ArrayTest" file="/Users/cmurray/Documents/code-standard-test/tests/unit/TestSuiteSampleTest.php" line="14" assertions="1" time="0.000076"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
