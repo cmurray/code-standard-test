@@ -9,19 +9,11 @@
          timeoutForSmallTests="5">
 
 
-
-  <!-- 
-    ** To ignore files enter files as comma separated string
-    ** If no files should be ignored, remove or comment out the ignore property
-    ** Use the following as an example of how to format the ignorefiles property
-    -->
-
-
-
   <testsuites>
+
   <!--
     ** Enter the name of your Test Suite and its location
-    ** All Tests should end in 'Test.php'
+    ** Enter the suffix and directory of your unit tests
     -->
     <testsuite name="Test-Suite-Name">
       <directory suffix="Test.php">tests/unit</directory>
@@ -44,7 +36,22 @@
 
   <filter>
     <whitelist addUncoveredFilesFromWhitelist="true">
+      
+    <!-- 
+      ** Enter the directory of your source code
+      -->
       <directory suffix=".php">src</directory>
+
+    <!-- 
+      ** To exclude files/directories uncomment the following code
+      ** Each file/directory must have its own entry
+      -->
+    <!-- 
+      ** <exclude>
+      **   <file>src/excludefile.php</file>
+      **   <directory>src/excludedirectory</directory>
+      ** </exclude>
+      -->
     </whitelist>
   </filter>
 
