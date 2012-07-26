@@ -40,13 +40,9 @@
 
 
   <filter>
-    <whitelist addUncoveredFilesFromWhitelist="true">
-
-    <!--
-      ** Enter the path to your source files
-      -->
-      <directory suffix=".php">src/</directory>
-    </whitelist>
+    <blacklist>
+      <directory suffix=".php">build</directory>
+    </blacklist>
   </filter>
 
 
