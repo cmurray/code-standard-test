@@ -28,7 +28,7 @@ class someClass {
      * @access protected
      * @var int
      */
-    protected $thisIsAReallyLongNameForAProtectedVariable = 5;
+    protected $thisISAReallyLongNameForAProtectedVariable = 5;
     private $thisIsAReallyLongNameForAPrivateVariable = 5;
     public $thisIsAReallyLongNameForAPublicVariable = 5;
     
@@ -38,7 +38,7 @@ class someClass {
     /**
      * @access public
      */
-    public function a($index) {
+    public function RawrRawrRAwr($index) {
     	return $index;
     }
 }
