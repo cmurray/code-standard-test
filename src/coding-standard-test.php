@@ -4,8 +4,8 @@ class TestClass {
 
     public function publicPass() {}    
     private function privateUnderscoreFail() {}
-/*    protected function protectedUnderscoreFail() {}
-
+    protected function protectedUnderscoreFail() {}
+/*
     public function PublicCamelFail() {}    
     private function PrivateUnderscoreFail() {}
     protected function ProtectedUnderscoreFail() {}
