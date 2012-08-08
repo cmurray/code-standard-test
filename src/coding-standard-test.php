@@ -18,35 +18,23 @@
  */
 class someClass {
 
-
-    /**
-     * This is a really long variable name
-     *
-     * This variable was given an extremely long
-     * name in order to test phpmd's functionality
-     *
-     * @access protected
-     * @var int
-     */
-    protected $ThisISAReallyLongNameForAProtectedVariable = 5;
-    private $thisIsAReallyLongNameForAPrivateVariable = 5;
-    public $thisIsAReallyLongNameForAPublicVariable = 5;
-    
-    
-    protected $thisIsAReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongNameForAProtectedVariable = 5;
-    
-    /**
-     * @access public
-     */
-    public function rawrRawrRawr($index) {
-    	return $index;
-    }
-
-    public function _rawr() {}    
+    public function rawr() {}    
     private function rawrRawr() {}
     protected function rawrRawrRawr() {}
+
+    public function Rawr() {}    
+    private function RawrRawr() {}
+    protected function RawrRawrRawr() {}
+
+
+    public function _rawr() {}    
+    private function _rawrRawr() {}
+    protected function _rawrRawrRawr() {}
     
-    public function _RAWRRARARARrawrR () {}
+    public function _Rawr() {}    
+    private function _RawrRawr() {}
+    protected function _RawrRawrRawr() {}
+
     
 }
 
