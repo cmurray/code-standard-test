@@ -7,8 +7,8 @@ class TestClass {
     protected function protectedUnderscoreFail() {}
 
     public function PublicCamelFail() {}    
-/*    private function PrivateUnderscoreFail() {}
-    protected function ProtectedUnderscoreFail() {}
+    private function PrivateUnderscoreFail() {}
+/*    protected function ProtectedUnderscoreFail() {}
 
 
     public function _publicUnderscoreFail() {}    
