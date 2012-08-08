@@ -1,6 +1,6 @@
 <?php
 
-class testClass {
+class TestClass {
 
     public function publicPass() {}                       //Passes correctly
     
