@@ -38,9 +38,13 @@ class someClass {
     /**
      * @access public
      */
-    public function rawr_Rawr_Rawr($index) {
+    public function rawrRawrRawr($index) {
     	return $index;
     }
+    
+    private function _rawrRawr() {}
+    protected function _rawrRawrRawr() {}
+    
 }
 
 ?>
