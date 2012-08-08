@@ -1,46 +1,46 @@
-  r
-<?phpr
-#Hur be a commentr
-//Another commentr
-//A normal commentr
-//A normal commentr
-//A normal commentr
-r
-/**r
- * Short descr
- *r
- * Long description first sentence starts herer
- * and continues on this line for a whiler
- * finally concluding here at the end ofr
- * this paragraphr
- *r
- * The blank line above denotes a paragraph breakr
- */r
-class someClass {r
-r
-r
-    /**r
-     * This is a really long variable namer
-     *r
-     * This variable was given an extremely longr
-     * name in order to test phpmd's functionalityr
-     *r
-     * @access protectedr
-     * @var intr
-     */r
-    protected $thisIsAReallyLongNameForAProtectedVariable = 5;r
-    private $thisIsAReallyLongNameForAPrivateVariable = 5;r
-    public $thisIsAReallyLongNameForAPublicVariable = 5;r
-    r
-    r
-    protected $thisIsAReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongNameForAProtectedVariable = 5;r
-    r
-    /**r
-     * @access publicr
-     */r
-    public function a($index) {r
-    	return $index;r
-    }r
-}r
-r
-?>r
+  
+<?php
+#Hur be a comment
+//Another comment
+//A normal comment
+//A normal comment
+//A normal comment
+
+/**
+ * Short desc
+ *
+ * Long description first sentence starts here
+ * and continues on this line for a while
+ * finally concluding here at the end of
+ * this paragraph
+ *
+ * The blank line above denotes a paragraph break
+ */
+class someClass {
+
+
+    /**
+     * This is a really long variable name
+     *
+     * This variable was given an extremely long
+     * name in order to test phpmd's functionality
+     *
+     * @access protected
+     * @var int
+     */
+    protected $thisIsAReallyLongNameForAProtectedVariable = 5;
+    private $thisIsAReallyLongNameForAPrivateVariable = 5;
+    public $thisIsAReallyLongNameForAPublicVariable = 5;
+    
+    
+    protected $thisIsAReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongNameForAProtectedVariable = 5;
+    
+    /**
+     * @access public
+     */
+    public function a($index) {
+    	return $index;
+    }
+}
+
+?>
