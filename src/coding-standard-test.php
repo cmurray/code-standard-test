@@ -28,7 +28,9 @@ class someClass {
      * @access protected
      * @var int
      */
-    protected $thisIsAReallyLongNameForAVariable = 5;
+    protected $thisIsAReallyLongNameForAProtectedVariable = 5;
+    private $thisIsAReallyLongNameForAPrivateVariable = 5;
+    public $thisIsAReallyLongNameForAPublicVariable = 5;
     
     /**
      * @access public
