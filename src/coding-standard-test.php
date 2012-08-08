@@ -41,9 +41,12 @@ class someClass {
     public function rawrRawrRawr($index) {
     	return $index;
     }
-    
+
+    public function _rawr() {}    
     private function _rawrRawr() {}
     protected function _rawrRawrRawr() {}
+    
+    public function _RAWRRARARARrawrR () {}
     
 }
 
