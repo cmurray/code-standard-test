@@ -32,6 +32,9 @@ class someClass {
     private $thisIsAReallyLongNameForAPrivateVariable = 5;
     public $thisIsAReallyLongNameForAPublicVariable = 5;
     
+    
+    protected $thisIsAReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongNameForAProtectedVariable = 5;
+    
     /**
      * @access public
      */
