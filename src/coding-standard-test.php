@@ -43,8 +43,8 @@ class someClass {
     }
 
     public function _rawr() {}    
-    private function _rawrRawr() {}
-    protected function _rawrRawrRawr() {}
+    private function rawrRawr() {}
+    protected function rawrRawrRawr() {}
     
     public function _RAWRRARARARrawrR () {}
     
