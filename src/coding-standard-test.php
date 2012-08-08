@@ -1,25 +1,9 @@
-  
 <?php
-#Hur be a comment
-//Another comment
-//A normal comment
-//A normal comment
-//A normal comment
 
-/**
- * Short desc
- *
- * Long description first sentence starts here
- * and continues on this line for a while
- * finally concluding here at the end of
- * this paragraph
- *
- * The blank line above denotes a paragraph break
- */
-class someClass {
+class TestClass {
 
     public function publicPass() {}    
-    private function privateUnderscoreFail() {}
+/*    private function privateUnderscoreFail() {}
     protected function protectedUnderscoreFail() {}
 
     public function PublicCamelFail() {}    
@@ -34,7 +18,5 @@ class someClass {
     private function _PrivateCamelFail() {}
     protected function _ProtectedCamelFail() {}
 
-    
+*/    
 }
-
-?>
