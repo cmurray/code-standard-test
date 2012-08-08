@@ -3,8 +3,8 @@
 class TestClass {
 
     public function publicPass() {}    
-/*    private function privateUnderscoreFail() {}
-    protected function protectedUnderscoreFail() {}
+    private function privateUnderscoreFail() {}
+/*    protected function protectedUnderscoreFail() {}
 
     public function PublicCamelFail() {}    
     private function PrivateUnderscoreFail() {}
