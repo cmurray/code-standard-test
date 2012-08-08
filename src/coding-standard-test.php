@@ -38,7 +38,7 @@ class someClass {
     /**
      * @access public
      */
-    public function RawrRawrRAwr($index) {
+    public function RawrRawrRawr($index) {
     	return $index;
     }
 }
