@@ -18,22 +18,21 @@
  */
 class someClass {
 
-    public function rawr() {}    
-    private function rawrRawr() {}
-    protected function rawrRawrRawr() {}
+    public function publicPass() {}    
+    private function privateUnderscoreFail() {}
+    protected function protectedUnderscoreFail() {}
 
-    public function Rawr() {}    
-    private function RawrRawr() {}
-    protected function RawrRawrRawr() {}
+    public function PublicCamelFail() {}    
+    private function PrivateUnderscoreFail() {}
+    protected function ProtectedUnderscoreFail() {}
 
 
-    public function _rawr() {}    
-    private function _rawrRawr() {}
-    protected function _rawrRawrRawr() {}
+    public function _publicUnderscoreFail() {}    
+    private function _privatePass() {}
+    protected function _protectedPass() {}
     
-    public function _Rawr() {}    
-    private function _RawrRawr() {}
-    protected function _RawrRawrRawr() {}
+    private function _PrivateCamelFail() {}
+    protected function _ProtectedCamelFail() {}
 
     
 }
