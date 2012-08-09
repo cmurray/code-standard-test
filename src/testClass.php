@@ -1,7 +1,7 @@
 
 <?php
 
-abstract class AbstractClass {
+abstract class testClass {
 
     public function publicPass() {}
     public function PublicCamelFail() {}
