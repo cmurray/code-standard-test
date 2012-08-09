@@ -2,9 +2,9 @@
 
 abstract class AbstractClass {
     // Force Extending class to define this method
-    abstract protected function getValue();
-    private function prefixValue($prefix) {}
-    protected function protectedPass() {}
+    abstract protected function _getValue();
+    private function _prefixValue($prefix) {}
+    protected function _protectedPass() {}
 
     // Common method
     public function printOut() {
