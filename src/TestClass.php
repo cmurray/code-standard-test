@@ -2,20 +2,10 @@
 
 class TestClass {
 
-    public $publicPass;
-    public $PublicCamelFail;
-    public $_publicUnderscoreFail;
-    public $_PublicUnderscoreCamelFail;
-
-    private $privateUnderscoreFail;
-    private $PrivateUnderscoreCamelFail;
-    private $_privatePass;
-    private $_PrivateCamelFail;
-
-    protected $protectedUnderscoreFail;
-    protected $ProtectedUnderscoreCamelFail;
-    protected $_protectedPass;
-    protected $_ProtectedCamelFail;
+	constant $PASS = 5;
+	constant $FAIL = 4;
+	constant $UNDERSCORE_PASS = 6;
+	constant $UNDERSCORE_fail = 3;
 
 
     public function publicPass() {}
