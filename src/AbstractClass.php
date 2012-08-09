@@ -8,10 +8,10 @@ class AbstractClass {
     public function _publicUnderscoreFail() {}
     public function _PublicUnderscoreCamelFail() {}
 
-    abstract private function privateUnderscoreFail();
-    abstract private function PrivateUnderscoreCamelFail();
-    abstract private function _privatePass();
-    abstract private function _PrivateCamelFail();
+    private function privateUnderscoreFail();
+    private function PrivateUnderscoreCamelFail();
+    private function _privatePass();
+    private function _PrivateCamelFail();
 
     abstract protected function protectedUnderscoreFail();
     abstract protected function ProtectedUnderscoreCamelFail();
