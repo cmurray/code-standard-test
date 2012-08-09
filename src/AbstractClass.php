@@ -1,13 +1,22 @@
+
 <?php
 
-abstract class AbstractClass {
-    // Force Extending class to define this method
-    abstract protected function _getValue();
-    private function _prefixValue($prefix) {}
-    protected function _protectedPass() {}
+class Class {
 
-    // Common method
-    public function printOut() {
-        print $this->_getValue() . "\n";
-    }
+    public function publicPass() {};
+    public function PublicCamelFail() {};
+    public function _publicUnderscoreFail() {};
+    public function _PublicUnderscoreCamelFail() {};
+
+    abstract private function privateUnderscoreFail();
+    abstract private function PrivateUnderscoreCamelFail();
+    abstract private function _privatePass();
+    abstract private function _PrivateCamelFail();
+
+    abstract protected function protectedUnderscoreFail();
+    abstract protected function ProtectedUnderscoreCamelFail();
+    abstract protected function _protectedPass();
+    abstract protected function _ProtectedCamelFail();
+
+    
 }
